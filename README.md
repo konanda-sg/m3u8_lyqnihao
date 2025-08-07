@@ -3,8 +3,8 @@
 ####  1.1、多仓
 [自有多仓](https://raw.githubusercontent.com/lyqnihao/m3u8/refs/heads/master/自有多仓.json)：https://raw.githubusercontent.com/lyqnihao/m3u8/refs/heads/master/自有多仓.json
 
-[欧歌多仓](https://raw.githubusercontent.com/lyqnihao/m3u8/refs/heads/master/欧歌多仓.json)：
-https://raw.githubusercontent.com/lyqnihao/m3u8/refs/heads/master/欧歌多仓.json
+[欧歌多仓](https://raw.githubusercontent.com/lyqnihao/m3u8/refs/heads/master/collect/欧歌多仓.json)：
+https://raw.githubusercontent.com/lyqnihao/m3u8/refs/heads/master/collect/欧歌多仓.json
 
 ####  1.2、单仓
 
