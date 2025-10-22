@@ -2,7 +2,7 @@
 https://hafrey1.github.io/LunaTV-config
 
 ### Luna-TV配置
-#### https://github.com/hafrey1/LunaTV-config
+https://github.com/hafrey1/LunaTV-config
 
 订阅使用：复制下面链接
 
