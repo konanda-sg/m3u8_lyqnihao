@@ -1,0 +1,62 @@
+name: FGBLH 仓库自动同步
+
+on:
+  schedule:
+    # 每天北京时间 10:00 和 22:00 运行
+    - cron: '0 2,14 * * *'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  sync-fgbloh:
+    name: 同步 FGBLH 仓库
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.8'
+
+      - name: 同步 FGBLH 仓库
+        id: sync
+        run: |
+          cd .github/scripts
+          python update_fgbloh.py
+        continue-on-error: true
+
+      - name: 检查是否有变更
+        id: check_changes
+        run: |
+          # 将 FGBLH 目录添加到暂存区
+          git add FGBLH/
+          # 检查暂存区是否有变更
+          if git diff --staged --quiet; then
+            # 没有变更
+            echo "HAS_CHANGES=false" >> $GITHUB_OUTPUT
+            echo "✗ FGBLH 目录未变化"
+          else
+            # 有变更
+            echo "HAS_CHANGES=true" >> $GITHUB_OUTPUT
+            echo "✓ 检测到 FGBLH 目录变更"
+          fi
+
+      - name: 提交变更
+        if: steps.check_changes.outputs.HAS_CHANGES == 'true'
+        run: |
+          # 获取当前北京时间
+          CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
+          # 配置 Git 用户信息
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          # 提交变更
+          git commit -m "FGBLH_${CURRENT_DATE} - 自动同步更新"
+
+      - name: 推送到远程仓库
+        if: steps.check_changes.outputs.HAS_CHANGES == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
