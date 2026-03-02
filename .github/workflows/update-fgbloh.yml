@@ -23,8 +23,7 @@ jobs:
       - name: 同步 FGBLH 仓库
         id: sync
         run: |
-          cd .github/scripts
-          python update_fgbloh.py
+          python .github/scripts/update_fgbloh.py
         continue-on-error: true
 
       - name: 检查是否有变更
