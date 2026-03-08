@@ -736,12 +736,6 @@
             "ua": "okhttp",
             "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/4gtv"
         },
-         {
-            "name": "🐙台湾立视(梯子台湾节点)",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/台湾立视"
-        },
         {
             "name": "🐙jackTV(梯子)",
             "type": 0,
@@ -753,18 +747,6 @@
             "type": 0,
             "ua": "okhttp",
             "url": "https://epg.pw/test_channels_taiwan.m3u"
-        },
-         {
-            "name": "🐙新加坡频道(新加坡家宽节点)",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "http://xtvantsc.xyz/新加坡.m3u"
-        },
-        {
-            "name": "🐙SingTel TV(新加坡家宽节点)",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/SingTelTV"
         },
         {
             "name": "🐙iptvpro🔞",
