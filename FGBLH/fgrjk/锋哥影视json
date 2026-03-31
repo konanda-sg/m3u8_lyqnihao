@@ -78,18 +78,6 @@
             }
         },
         {
-            "key":"瓜子",
-            "name":"🐙瓜子影视｜追剧",
-            "type":3,
-            "api":"csp_Guazi",
-            "searchable":1,
-            "quickSearch":1,
-            "filterable":1,
-            "playerType":1,
-            "changeable":1,
-            "jar":"https://ghproxy.net/https://raw.githubusercontent.com/qdpdwjx/ziyuan/master/JAR/fuma.jar;md5;542ED744B07121213F70323B9BCBECCA"
-        },
-        {
             "key": "API_如意",
             "name": "🐙如意影视｜追剧",
             "type": 1,
